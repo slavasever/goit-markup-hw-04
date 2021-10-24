@@ -121,6 +121,8 @@ header {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -131,14 +133,28 @@ header {
 .contacts-link:focus {
   color: var(--accent-color);
 }
+.contacts-link:hover,
+.contacts-link:focus .contact-icon {
+  fill: var(--accent-color);
+}
+
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 
 /* --------герой------------ */
 
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-
-  background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-header {
@@ -212,6 +228,16 @@ header {
   color: var(--primary-text-color);
 }
 
+.priorities-icon-container {
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 /* -------------------Чем мы занимаемся---------------- */
 .what-we-do {
   padding-bottom: 94px;
@@ -280,6 +306,90 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  margin-bottom: 16px;
+}
+
+.social-icons-list {
+  display: flex;
+  justify-content: center;
+}
+.social-icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.social-link {
+  color: #afb1b8;
+}
+
+.social-icon {
+  fill: currentColor;
+}
+
+.social-icon-item:hover,
+.social-icon-item:focus {
+  background-color: var(--accent-color);
+}
+.social-icon-item:hover .social-icon,
+.social-icon-item:focus .social-icon {
+  fill: #ffffff;
+}
+
+.social-icon-item:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------клиенты------------ */
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.client-item:last-child {
+  margin-right: 0;
+}
+
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #afb1b8;
+  width: 170px;
+  height: 92px;
+  border: 1px solid rgba(175, 177, 184, 1);
+}
+
+.client-icon {
+  fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+}
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
 }
 
 /* ------футер-------- */
