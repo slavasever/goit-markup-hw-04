@@ -314,36 +314,36 @@ header {
   justify-content: center;
 }
 .social-icon-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
   width: 44px;
   height: 44px;
-
   margin-right: 10px;
-  cursor: pointer;
+}
+
+.social-icon-item:last-child {
+  margin-right: 0;
 }
 
 .social-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   color: #afb1b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icon {
   fill: currentColor;
 }
 
-.social-icon-item:hover,
-.social-icon-item:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
 }
-.social-icon-item:hover .social-icon,
-.social-icon-item:focus .social-icon {
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
   fill: #ffffff;
-}
-
-.social-icon-item:last-child {
-  margin-bottom: 0;
 }
 
 /* ---------клиенты------------ */
@@ -359,8 +359,9 @@ header {
 }
 
 .client-item {
+  width: 170px;
+  height: 92px;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-right: 30px;
 }
@@ -374,8 +375,8 @@ header {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
-  width: 170px;
-  height: 92px;
+  width: 100%;
+  height: 100%;
   border: 1px solid rgba(175, 177, 184, 1);
 }
 
@@ -442,6 +443,60 @@ header {
   color: var(--accent-color);
 }
 
+.join-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+
+  margin-bottom: 20px;
+}
+
+.footer-flex {
+  display: flex;
+}
+
+.join {
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+.footer-icons-list {
+  display: flex;
+  justify-content: center;
+}
+.footer-icon-item {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.footer-icon-item:last-child {
+  margin-right: 0;
+}
+
+.footer-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: var(--third-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon {
+  fill: currentColor;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--accent-color);
+}
+
 /* ========ПОРТФОЛИО============*/
 .samples {
   padding-top: 94px;
@@ -505,8 +560,7 @@ header {
   padding: 20px 24px;
 }
 
-.sample-item:hover,
-.sample-item:focus {
+.sample-item:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
